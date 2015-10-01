@@ -1,0 +1,50 @@
+{
+  "name": "angular-schema-form-nwp-file-upload",
+  "version": "0.1.0",
+  "description": "Upload file type for Angular Schema Form",
+  "main": "dist/schema-form-file.min.js",
+  "devDependencies": {
+    "add-stream": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-header": "^1.2.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saburab/angular-schema-form-nwp-file-upload.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "schema",
+    "form",
+    "file",
+    "upload"
+  ],
+  "author": {
+    "name": "Sufian Abu-Rab",
+    "email": "s.aburab@gmail.com",
+    "url": ""
+  },
+  "contributors": [{
+    "name": "Steve Rasch",
+    "email": "rasch@netzwerkplan.de",
+    "url": ""
+  },{
+    "name": "Florian Berthel",
+    "email": "berthel@netzwerkplan.de",
+    "url": ""
+  }],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saburab/angular-schema-form-nwp-file-upload/issues"
+  },
+  "homepage": "https://github.com/saburab/angular-schema-form-nwp-file-upload#readme"
+}
