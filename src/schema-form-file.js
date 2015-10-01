@@ -80,7 +80,7 @@ angular
          scope:    true,
          require:  'ngModel',
          link:     function (scope, element, attrs, ngModel) {
-            var url = scope.form && scope.form.endpoint === 'https://angular-file-upload-cors-srv.appspot.com/upload';
+            scope.url = scope.form && scope.form.endpoint;
             scope.isSinglefileUpload = scope.form && scope.form.schema && scope.form.schema.format === 'singlefile';
 
             scope.selectFile  = function (file) {
@@ -101,9 +101,9 @@ angular
             };
 
             function doUpload(file) {
-               if (file && !file.$error) {
+               if (file && !file.$error && scope.url) {
                   file.upload = Upload.upload({
-                     url:  url,
+                     url:  scope.url,
                      file: file
                   });
 
