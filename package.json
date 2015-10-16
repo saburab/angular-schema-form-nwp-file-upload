@@ -1,6 +1,6 @@
 {
   "name": "angular-schema-form-nwp-file-upload",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Upload file type for Angular Schema Form",
   "main": "dist/schema-form-file.min.js",
   "devDependencies": {

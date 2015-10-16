@@ -55,11 +55,3 @@ gulp.task('build-app-prod', function() {
 });
 
 gulp.task('default', ['build-app-dev', 'build-app-prod']);
-
-// connect local server
-gulp.task('connect', function() {
-    connect.server({
-        port: 8080,
-        fallback: 'index.html'
-    });
-});
