@@ -135,4 +135,5 @@ Demo
 -------
 
 [Example Plunker](http://plnkr.co/edit/sboEMnUj5mzoyS2wqy4F?p=preview)
+
 [Example Codepen](http://codepen.io/sufius/pen/MaNQrY)
