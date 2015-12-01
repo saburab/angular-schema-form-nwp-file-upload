@@ -1,13 +1,13 @@
 'use strict';
 
-var myApp = angular.module('myApp', [
+var myApp = angular.module('formApp', [
    'schemaForm',
    'ngSchemaFormFile'
 ]);
 
 // our controller for the form
 // =============================================================================
-myApp.controller('FormController', ['$scope', '$http', function ($scope, $http) {
+myApp.controller('formController', ['$scope', '$http', function ($scope, $http) {
 
    $http.get('schema.json').success(function (data) {
       $scope.schema = data.schema;

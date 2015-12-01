@@ -1,0 +1,52 @@
+.file-upload {
+    margin-bottom: 15px;
+}
+.file-upload .dragAndDropDescription {
+  border: 3px dashed #e1e2e3;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+
+.file-upload .dragAndDropDescription p {
+  vertical-align: middle;
+  color: #1567ce;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin: 40px auto 40px;
+  display: block;
+}
+
+.file-upload .progress-bar {
+  min-width: 2em;
+}
+
+.file-upload label {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.file-upload .filename {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.file-upload .errorMsg {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.file-upload > .row {
+  margin-bottom: 10px;
+}
+.file-upload > .list-group > .list-group-item {
+  margin: 0;
+}
+.file-upload > .list-group > .list-group-item .mb-sm{
+  margin: 0;
+}
+.file-upload #fileInputButton {
+  margin-top: 15px;  
+}
