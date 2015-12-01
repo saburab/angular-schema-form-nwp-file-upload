@@ -1,11 +1,11 @@
 <ng-form class="file-upload mb-lg" ng-schema-file ng-model="$$value$$" name="uploadForm">
    <label ng-show="form.title && form.notitle !== true" class="control-label" ng-class="{'sr-only': !showTitle()}" for="fileInputButton">
       <strong>{{ form.title }}</strong>
-      <i ng-class="{'text-danger': uploadForm.file.$error.required}" ng-show="form.required">*{{ 'modules.attribute.fields.required.caption' | translate }}</i>
+      <i ng-class="{'text-danger': uploadForm.file.$error.required || uploadForm.files.$error.required}" ng-show="form.required">*{{ 'modules.attribute.fields.required.caption' | translate }}</i>
    </label>
    <label ng-show="!form.title || form.notitle === true" class="control-label" ng-class="{'sr-only': !showTitle()}" for="fileInputButton">
       <strong>{{ isSinglefileUpload ? 'modules.upload.singleFileUpload' : 'modules.upload.multiFileUpload' | translate }}</strong>
-      <i ng-class="{'text-danger': uploadForm.file.$error.required}" ng-show="form.required">*{{ 'modules.attribute.fields.required.caption' | translate }}</i>
+      <i ng-class="{'text-danger': uploadForm.file.$error.required || uploadForm.files.$error.required}" ng-show="form.required">*{{ 'modules.attribute.fields.required.caption' | translate }}</i>
    </label>
    <i class="text-danger errorMsg mb-sm" ng-show="errorMsg">{{errorMsg}}</i>
 
