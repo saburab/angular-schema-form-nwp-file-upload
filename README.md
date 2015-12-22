@@ -131,9 +131,8 @@ Options
 ```
 
 
-Demo
+Example pictures
 -------
-
-[Example Plunker](http://plnkr.co/edit/sboEMnUj5mzoyS2wqy4F?p=preview)
-
-[Example Codepen](http://codepen.io/sufius/pen/MaNQrY)
+![alt tag](https://raw.githubusercontent.com/saburab/angular-schema-form-nwp-file-upload/master/upload_1.png)
+![alt tag](https://raw.githubusercontent.com/saburab/angular-schema-form-nwp-file-upload/master/upload_2.png)
+![alt tag](https://raw.githubusercontent.com/saburab/angular-schema-form-nwp-file-upload/master/upload_3.png)
