@@ -134,10 +134,15 @@ Options
 Example pictures
 -------
 **Initial state**
+
 ![alt tag](https://raw.githubusercontent.com/saburab/angular-schema-form-nwp-file-upload/master/upload_1.png)
 
+
 **Preview**
+
 ![alt tag](https://raw.githubusercontent.com/saburab/angular-schema-form-nwp-file-upload/master/upload_2.png)
 
+
 **On error**
+
 ![alt tag](https://raw.githubusercontent.com/saburab/angular-schema-form-nwp-file-upload/master/upload_3.png)
