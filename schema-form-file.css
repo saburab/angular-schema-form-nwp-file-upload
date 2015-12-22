@@ -50,3 +50,12 @@
 .file-upload #fileInputButton {
   margin-top: 15px;  
 }
+.has-error.border-danger {
+  border-color: #f05050;
+}
+.mb0 {
+  margin-bottom: 0 !important;
+}
+.mb {
+  margin-bottom: 10px !important;
+}

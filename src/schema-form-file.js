@@ -72,7 +72,8 @@ angular
 
 angular
    .module('ngSchemaFormFile', [
-      'ngFileUpload'
+      'ngFileUpload',
+      'ngMessages'
    ])
    .directive('ngSchemaFile', ['Upload', '$timeout', '$q', function (Upload, $timeout, $q) {
       return {
