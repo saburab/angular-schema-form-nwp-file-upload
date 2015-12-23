@@ -1,24 +1,25 @@
 <ng-form class="file-upload mb-lg" ng-schema-file ng-model="$$value$$" name="uploadForm">
-    <label ng-show="form.title && form.notitle !== true" class="control-label" for="fileInputButton" ng-class="{'sr-only': !showTitle(), 'text-danger': uploadForm.$error.required && !uploadForm.$pristine}">
-        {{ form.title}}<i ng-show="form.required">&nbsp;*</i>
-    </label>
+   <label ng-show="form.title && form.notitle !== true" class="control-label" for="fileInputButton" ng-class="{'sr-only': !showTitle(), 'text-danger': uploadForm.$error.required && !uploadForm.$pristine}">
+      {{ form.title }}<i ng-show="form.required">&nbsp;*</i>
+   </label>
 
-    <div ng-show="picFile">
-        <div ng-include="'uploadProcess.html'" class="mb"></div>
-    </div>
+   <div ng-show="picFile">
+      <div ng-include="'uploadProcess.html'" class="mb"></div>
+   </div>
 
-    <ul ng-show="picFiles && picFiles.length" class="list-group">
-        <li class="list-group-item" ng-repeat="picFile in picFiles">
-            <div ng-include="'uploadProcess.html'"></div>
-        </li>
-    </ul>
+   <ul ng-show="picFiles && picFiles.length" class="list-group">
+      <li class="list-group-item" ng-repeat="picFile in picFiles">
+         <div ng-include="'uploadProcess.html'"></div>
+      </li>
+   </ul>
 
-    <div class="well well-sm bg-white mb" ng-class="{'has-error border-danger': (uploadForm.$error.required && !uploadForm.$pristine) || (hasError() && errorMessage(schemaError()))}">
-        <div ng-if="isSinglefileUpload" ng-include="'singleFileUpload.html'"></div>
-        <div ng-if="!isSinglefileUpload" ng-include="'multiFileUpload.html'"></div>
-        <div class="help-block mb0" ng-show="uploadForm.$error.required && !uploadForm.$pristine">{{ 'modules.attribute.fields.required.caption' | translate }}</div>
-        <div class="help-block mb0" ng-show="(hasError() && errorMessage(schemaError())) || form.description" ng-bind-html="(hasError() && errorMessage(schemaError())) || form.description"></div>
-    </div>
+   <div class="well well-sm bg-white mb" ng-class="{'has-error border-danger': (uploadForm.$error.required && !uploadForm.$pristine) || (hasError() && errorMessage(schemaError()))}">
+      <small class="text-muted" ng-show="form.description" ng-bind-html="form.description"></small>
+      <div ng-if="isSinglefileUpload" ng-include="'singleFileUpload.html'"></div>
+      <div ng-if="!isSinglefileUpload" ng-include="'multiFileUpload.html'"></div>
+      <div class="help-block mb0" ng-show="uploadForm.$error.required && !uploadForm.$pristine">{{ 'modules.attribute.fields.required.caption' | translate }}</div>
+      <div class="help-block mb0" ng-show="(hasError() && errorMessage(schemaError()))" ng-bind-html="(hasError() && errorMessage(schemaError()))"></div>
+   </div>
 </ng-form>
 
 <script type='text/ng-template' id="uploadProcess.html">
