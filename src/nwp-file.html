@@ -13,7 +13,7 @@
         </li>
     </ul>
 
-    <div class="well well-sm bg-white mb" ng-class="{'has-error border-danger': (uploadForm.$error.required && !uploadForm.$pristine) || (hasError() && errorMessage(schemaError())) || form.description}">
+    <div class="well well-sm bg-white mb" ng-class="{'has-error border-danger': (uploadForm.$error.required && !uploadForm.$pristine) || (hasError() && errorMessage(schemaError()))}">
         <div ng-if="isSinglefileUpload" ng-include="'singleFileUpload.html'"></div>
         <div ng-if="!isSinglefileUpload" ng-include="'multiFileUpload.html'"></div>
         <div class="help-block mb0" ng-show="uploadForm.$error.required && !uploadForm.$pristine">{{ 'modules.attribute.fields.required.caption' | translate }}</div>
