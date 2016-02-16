@@ -20,10 +20,11 @@ You'll need to load a few additional files to use the editor:
 Example
 
 ```HTML
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all" rel="stylesheet" />
-<link href="schema-form-file.css" media="all" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all" rel="stylesheet" />
+<link href="/schema-form-file.css" media="all" rel="stylesheet" />
 
 <script src="/bower_components/angular/angular.min.js" type="text/javascript"></script>
+<script src="/bower_components/angular-messages/angular-messages.js" type="text/javascript"></script>
 <script src="/bower_components/angular-sanitize/angular-sanitize.min.js" type="text/javascript"></script>
 <script src="/bower_components/angular-translate/angular-translate.js" type="text/javascript"></script>
 <script src="/bower_components/tv4/tv4.js" type="text/javascript"></script>
@@ -31,13 +32,13 @@ Example
 <script src="/bower_components/angular-schema-form/dist/schema-form.min.js" type="text/javascript"></script>
 <script src="/bower_components/angular-schema-form/dist/bootstrap-decorator.min.js" type="text/javascript"></script>
 <script src="/bower_components/ng-file-upload/ng-file-upload-all.min.js" type="text/javascript"></script>
-<script src="schema-form-file.min.js" type="text/javascript"></script>
+<script src="/schema-form-file.min.js" type="text/javascript"></script>
 ```
 
 When you create your module, be sure to depend on this project's module as well.
 
 ```javascript
-angular.module('yourModule', ['schemaForm','ngFileUpload','pascalprecht.translate']);
+angular.module('yourModule', ['schemaForm','pascalprecht.translate', 'ngSchemaFormFile']);
 ```
 
 Usage
