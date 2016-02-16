@@ -3,17 +3,14 @@
 <head>
     <meta charset="utf-8">
     <title>Angular Schema Form NWP File Upload</title>
-
     <!-- CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all" rel="stylesheet">
     <link href="schema-form-file.css" media="all" rel="stylesheet" />
 </head>
-
 <!-- apply our angular app -->
 <body>
     <div class="container">
         <h1>Form with file Demo</h1>
-
         <div ng-controller="formController">
             <form
                 name="myForm"
@@ -24,24 +21,18 @@
                 no-validate>
             </form>
         </div>
-
     </div>
-
     <!-- JS -->
     <script src="bower_components/angular/angular.js" type="text/javascript"></script>
-
+    <script src="bower_components/angular-messages/angular-messages.js" type="text/javascript"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js" type="text/javascript"></script>
     <script src="bower_components/angular-translate/angular-translate.js" type="text/javascript"></script>
-
     <script src="bower_components/tv4/tv4.js" type="text/javascript"></script>
     <script src="bower_components/objectpath/lib/ObjectPath.js" type="text/javascript"></script>
     <script src="bower_components/angular-schema-form/dist/schema-form.js" type="text/javascript"></script>
     <script src="bower_components/angular-schema-form/dist/bootstrap-decorator.min.js" type="text/javascript"></script>
-
     <script src="bower_components/ng-file-upload/ng-file-upload-all.min.js" type="text/javascript"></script>
-
     <script src="dist/schema-form-file.min.js" type="text/javascript"></script>
-
     <script src="app.js" type="text/javascript"></script>
 </body>
 </html>
