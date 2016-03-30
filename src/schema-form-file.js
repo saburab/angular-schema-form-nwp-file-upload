@@ -112,6 +112,8 @@ angular
                      $timeout(function () {
                         file.result = response.data;
                      });
+                     ngModel.$setViewValue(response.data);
+                     ngModel.$commitViewValue();
                   }, function (response) {
                      if (response.status > 0) {
                         scope.errorMsg = response.status + ': ' + response.data;
