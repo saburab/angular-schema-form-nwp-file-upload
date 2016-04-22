@@ -22,7 +22,7 @@
     "file",
     "upload"
   ],
-  "main": "dist/schema-form-file.min.js",
+  "main": "dist/schema-form-file.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
