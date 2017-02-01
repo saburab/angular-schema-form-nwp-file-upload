@@ -104,7 +104,7 @@ angular
             function doUpload(file) {
                if (file && !file.$error && scope.url) {
                   var options = {
-                     url: scope.url;
+                     url: scope.url
                   };
                   options[scope.form.fileName || 'file'] = file;
                   file.upload = Upload.upload(options);
