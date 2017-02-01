@@ -103,10 +103,11 @@ angular
 
             function doUpload(file) {
                if (file && !file.$error && scope.url) {
-                  file.upload = Upload.upload({
-                     url:  scope.url,
-                     file: file
-                  });
+                  var options = {
+                     url: scope.url;
+                  };
+                  options[scope.form.fileName || 'file'] = file;
+                  file.upload = Upload.upload(options);
 
                   file.upload.then(function (response) {
                      $timeout(function () {
