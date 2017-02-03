@@ -25,8 +25,8 @@
 <script type='text/ng-template' id="uploadProcess.html">
    <div class="row mb">
       <div class="col-sm-4 mb-sm">
-         <label title="{{ 'modules.upload.field.preview' | translate }}" class="text-info">{{
-            'modules.upload.field.preview' | translate }}</label>
+         <label title="{{ form.i18n.preview }}" class="text-info">{{
+            form.i18n.preview }}</label>
          <img ngf-src="picFile" class="img-thumbnail img-responsive">
          <div class="img-placeholder"
               ng-class="{'show': picFile.$invalid && !picFile.blobUrl, 'hide': !picFile || picFile.blobUrl}">No preview
@@ -34,13 +34,13 @@
          </div>
       </div>
       <div class="col-sm-4 mb-sm">
-         <label title="{{ 'modules.upload.field.filename' | translate }}" class="text-info">{{
-            'modules.upload.field.filename' | translate }}</label>
+         <label title="{{ form.i18n.filename }}" class="text-info">{{
+            form.i18n.filename | translate }}</label>
          <div class="filename" title="{{ picFile.name }}">{{ picFile.name }}</div>
       </div>
       <div class="col-sm-4 mb-sm">
-         <label title="{{ 'modules.upload.field.progress' | translate }}" class="text-info">{{
-            'modules.upload.field.progress' | translate }}</label>
+         <label title="{{ form.i18n.progress }}" class="text-info">{{
+            form.i18n.progress }}</label>
          <div class="progress">
             <div class="progress-bar progress-bar-striped" role="progressbar"
                  ng-class="{'progress-bar-success': picFile.progress == 100}"
@@ -49,15 +49,15 @@
             </div>
          </div>
          <button class="btn btn-primary btn-sm" type="button" ng-click="uploadFile(picFile)"
-                 ng-disabled="!picFile || picFile.$error">{{ "buttons.upload" | translate }}
+                 ng-disabled="!picFile || picFile.$error">{{ form.i18n.upload }}
          </button>
       </div>
    </div>
    <div ng-messages="uploadForm.$error" ng-messages-multiple="">
-      <div class="text-danger errorMsg" ng-message="maxSize">{{ form.schema[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong>. ({{ form.schema[picFile.$error].validationMessage2 | translate }} <strong>{{picFile.size / 1000000|number:1}}MB</strong>)</div>
-      <div class="text-danger errorMsg" ng-message="pattern">{{ form.schema[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong></div>
-      <div class="text-danger errorMsg" ng-message="maxItems">{{ form.schema[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong></div>
-      <div class="text-danger errorMsg" ng-message="minItems">{{ form.schema[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong></div>
+      <div class="text-danger errorMsg" ng-message="maxSize">{{ form[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong>. ({{ form[picFile.$error].validationMessage2 | translate }} <strong>{{picFile.size / 1000000|number:1}}MB</strong>)</div>
+      <div class="text-danger errorMsg" ng-message="pattern">{{ form[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong></div>
+      <div class="text-danger errorMsg" ng-message="maxItems">{{ form[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong></div>
+      <div class="text-danger errorMsg" ng-message="minItems">{{ form[picFile.$error].validationMessage | translate }} <strong>{{picFile.$errorParam}}</strong></div>
       <div class="text-danger errorMsg" ng-show="errorMsg">{{errorMsg}}</div>
    </div>
 </script>
@@ -70,7 +70,7 @@
         ng-required="form.required"
         accept="{{form.schema.pattern && form.schema.pattern.mimeType}}"
         ng-model-options="form.ngModelOptions" ngf-drag-over-class="dragover" class="drop-box dragAndDropDescription">
-      <p class="text-center">{{ 'modules.upload.descriptionSinglefile' | translate }}</p>
+      <p class="text-center">{{ form.i18n.dragorclick }}</p>
    </div>
    <div ngf-no-file-drop>{{ 'modules.upload.dndNotSupported' | translate}}</div>
 
@@ -82,7 +82,7 @@
            ng-model-options="form.ngModelOptions" id="fileInputButton"
            class="btn btn-primary btn-block {{form.htmlClass}} mt-lg mb">
       <fa fw="fw" name="upload" class="mr-sm"></fa>
-      {{ "buttons.add" | translate }}
+      {{ form.i18n.add }}
    </button>
 </script>
 
