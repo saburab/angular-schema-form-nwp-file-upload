@@ -120,7 +120,15 @@ Options
       {
          "key":      "image",
          "type":     "nwpFileUpload",
-         "endpoint": "https://angular-file-upload-cors-srv.appspot.com/upload"
+         "endpoint": "https://angular-file-upload-cors-srv.appspot.com/upload",
+         "i18n": {
+                "add": "Open file browser",
+                "preview": "Preview Upload",
+                "filename": "File Name",
+                "progress": "Progress Status",
+                "upload": "Upload",
+                "dragorclick": "Drag and drop your file here or click here"
+         }
       },
       {
          "key":      "images",
@@ -129,6 +137,38 @@ Options
       }
    ]
 }
+```
+
+Labels
+------
+
+### From the form definition using i18n
+
+In the above example, the form definition for singleFile upload, labels are defined by using the "i18n" object. 
+
+### By using the angular translate module
+If there is no i18n object defined for the form then angular translate come into play. Label will fallback to the configured translated strings. 
+
+**Example Configuration**
+```javascript
+   
+   yourAngularApp.config(['$translateProvider', function($translateProvider) {
+        $translateProvider.translations('en', {
+            'modules.upload.dndNotSupported': 'Drag n drop not surpported by your browser',
+            'modules.attribute.fields.required.caption': 'Required',
+            'modules.upload.descriptionSinglefile': 'Drop your file here',
+            'modules.upload.descriptionMultifile': 'Drop your file(s) here',
+            'buttons.add': 'Open file browser',
+            'modules.upload.field.filename': 'Filename',
+            'modules.upload.field.preview': 'Preview',
+            'modules.upload.multiFileUpload': 'Multifile upload',
+            'modules.upload.field.progress': 'Progress',
+            'buttons.upload': 'Upload'
+        });
+        $translateProvider.preferredLanguage('en');
+
+    }]);
+
 ```
 
 
